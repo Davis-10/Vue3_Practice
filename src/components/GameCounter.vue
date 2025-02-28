@@ -1,26 +1,27 @@
-<script setup>
-const isActive = false
-</script>
+<script setup></script>
 
 <template>
-  <button>menos</button>
+  <div class="counter-game">
+    <span class="number">0</span>
 
-  <span class="counter" :class="{ 'counter--active': isActive }">contador: 0</span>
+    <div class="button-group">
+      <button>+</button>
 
-  <button>mas</button>
+      <button>-</button>
+    </div>
+  </div>
 </template>
 
 <style scoped>
-.counter {
+.counter-game {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+.number {
+  font-size: 5rem;
   font-weight: bold;
-  font-size: 2rem;
-}
-
-.counter--active {
-  color: green;
-}
-
-button {
-  background-color: red;
+  color: white;
 }
 </style>
